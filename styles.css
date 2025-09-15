@@ -9,6 +9,7 @@
     --black: hsl(0, 0%, 0%);
     --orange-500: hsl(25, 97%, 53%);
     --grey-500: hsl(217, 12%, 63%);
+    --grey-800: hsl(216, 12%, 24%);
     --grey-900: hsl(213, 19%, 18%);
     --grey-950: hsl(216, 12%, 8%);
     --gradient: linear-gradient(180deg, hsl(215, 20%, 17%), hsl(216, 24%, 12%));
@@ -52,7 +53,7 @@ body {
     background: linear-gradient(180deg, hsl(215, 20%, 17%), hsl(216, 24%, 12%));
     border-radius: 25px;
     padding: var(--spacing-400);
-    max-width: 400px;
+    max-width: 350px;
     box-shadow: 0 25px 40px hsl(216, 12%, 8%);
     min-width: 330px;
     min-height: 360px;
@@ -119,6 +120,7 @@ input[type="submit"]{
 
 .thank-you-card{
     max-width: 400px;
+    height: 400px;
     background: var(--grey-900);
     color: var(--white);
     border-radius: 25px;
@@ -127,9 +129,43 @@ input[type="submit"]{
     display: none;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
 }
 
 .thank-you-card img{
-    width: 100px;
-    margin-bottom: var(--spacing-300);
+    width: 162px;
+    height: 108px;
+}
+
+.selected-rating{
+    background: var(--orange-500);
+    color: var(--grey-950);
+}
+
+button:hover, input[type="submit"]:hover{
+    background: var(--grey-500);
+    color: var(--white);
+}
+
+.message{
+    color: var(--grey-500);
+    text-align: center;
+    font-size: var(--font-size-4);
+    line-height: var(--line-height-4);
+}
+.rating-value{
+    background: var(--grey-800);
+    color: var(--orange-500);
+    border-radius: 25px;
+    padding: var(--spacing-100) var(--spacing-200);
+    font-size: var(--font-size-4);
+    line-height: var(--line-height-4);
+}
+
+@media screen and (min-width: 420px){
+    .card, .thank-you-card{
+        max-width: 420px;
+        width: 420px;
+        padding: var(--spacing-300);
+    }
 }
